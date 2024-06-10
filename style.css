@@ -1,0 +1,62 @@
+@charset "UTF=8";
+@font-face {
+   font-family: playstory;
+   src: url(_fonts/playstory.otf);
+   font-weight: normal;
+}
+@font-face {
+    font-family: kinkee;
+    src: url(_fonts/kinkee.TTF);
+    font-weight: normal;
+}
+
+body{
+    background-color: #F7B0C2;
+    margin: 0;
+    max-width: 100%;
+}
+
+#perguntas{
+    background-color: #AC0908;
+    max-width: 100%;
+    height: 100%;
+    position: sticky;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3% 10% 3%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#perguntas h2{
+    margin: 0;
+    padding: 20px 0px 0px;
+    font-size: 20px;
+    font-family: 'playstory', 'Times New Roman', Times, serif;
+}
+
+#perguntas p{
+    width: 100%;
+    margin: 30px 0px 5px;
+    font-size: 25px;
+    font-family: 'playstory', 'Times New Roman', Times, serif;
+}
+
+#perguntas label{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#perguntas button{
+    margin: 30px 0px 30px ;
+    font-size: 30px;
+    font-family: 'kinkee', 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+#perguntas button:hover{
+    transition: 0.5s;
+    background-color: #000000;
+    color: #FFFFFF;
+    opacity: 1;
+}

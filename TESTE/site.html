@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Perguntas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="questions">
+        <h2>Responda às perguntas para acessar o site:</h2>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. Qual é a capital do Brasil?</p>
+                <label>
+                    <input type="radio" name="q1" value="a">São Paulo
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="b">Brasília
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="c"> Rio de Janeiro
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="d"> Belo Horizonte
+                </label>
+            </div>
+            <div class="question">
+                <p>2. Qual é a linguagem de programação mais popular para desenvolvimento web?</p>
+                <label>
+                    <input type="radio" name="q2" value="a"> HTML
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="b"> CSS
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="c"> JavaScript
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="d"> Python
+                </label>
+            </div>
+            <div class="question">
+                <p>3. Qual é a cor do céu durante o dia?</p>
+                <label>
+                    <input type="radio" name="q3" value="a"> Vermelho
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="b"> Verde
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="c"> Azul
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="d"> Amarelo
+                </label>
+            </div>
+            <button type="button" onclick="checkAnswers()">Verificar Respostas</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
