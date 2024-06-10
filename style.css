@@ -1,12 +1,12 @@
 @charset "UTF=8";
 @font-face {
    font-family: playstory;
-   src: url(_fonts/playstory.otf);
+   src: url(fonts/playstory.otf);
    font-weight: normal;
 }
 @font-face {
     font-family: kinkee;
-    src: url(_fonts/kinkee.TTF);
+    src: url(fonts/kinkee.TTF);
     font-weight: normal;
 }
 
