@@ -5,9 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TE AMO</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagens/mainfavicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="_imagens/mainfavicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <div id="navegação">
+        <a href="presente.html" target="_self"><img src="_imagens/love.gif" alt="coraçãogif" id="logo"></a>
+        <nav>
+            <a href="presente.html" target="_self">PRESENTE</a>
+            <a href="momentos.html" target="_self">MOMENTOS</a>
+            <a href="galeria.html" target="_self">GALERIA</a>
+        </nav>
+    </div>
+    <h1 class="p1h1">GOSTARIA DE COMEÇAR DIZENDO QUE TE AMO</h1>
+    <h2 class="p1h2">Demorou bastante mas chegamos aqui</h2>
+    <div id="presente">
+        <div class="envelope">
+            <div class="envelopeinterno aba">
+                <div class="texto">
+                    <div class="frase">
+                        <h3><strong>Minha Querida</strong></h3>
+                        <p><strong>Como expressar em simples palavras tudo que sinto por você?</strong><br>
+                        Você que é o amor da minha vida, minnha flor e minha princesa, serei franco com você, mesmo eu não achei que iriamos durar tanto, talvez o medo de começar algo novo ou o medo de estragar algo maravilhoso, independente.<br>
+                        Você voltou para minha vida no momento em que eu precisava de um ombro amigo e desde lá se tornou mais uma vez a mulher da minha vida, aquela que certamente é inesquecivel, meu tchan e a pessoa mais confidente que eu pudesse desejar para ter ao meu lado, obrigado por ser essa mulher maravilhosa que eu tanto amo e espero que com o passar do tempo nosso amor só cresça mais e mais.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelopeinterno = document.querySelector('.envelope');
+        envelopeinterno.addEventListener('click', () => {
+            envelopeinterno.classList.toggle('aba');
+        });
+    </script>
 </body>
 </html>

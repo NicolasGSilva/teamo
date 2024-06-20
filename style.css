@@ -1,61 +1,127 @@
 @charset "UTF=8";
-@font-face {
+@font-face{
    font-family: playstory;
    src: url(_fonts/playstory.otf);
    font-weight: normal;
 }
-@font-face {
+@font-face{
+    font-family: neue;
+    src: url(_fonts/neuemail.ttf);
+    font-weight: normal;
+} 
+@font-face{
     font-family: kinkee;
     src: url(_fonts/kinkee.TTF);
     font-weight: normal;
 }
-
+@font-face {
+    font-family: cursiva;
+    src: url(_fonts/cursive.ttf);
+    font-weight: normal;
+}
 :root{
     --fontetitulos: 'playstory', sans-serif;
+    --fonteprincipal: 'neue', sans-serif;
+    --fontecursiva: 'cursiva', serif;
+    --fontegay: 'kinkee', sans-serif;
+    --corprincipal: #F7B0C2;
+    --cordestaques: #6B4E71;
 }
-
-body{
-    background-color: #F7B0C2;
+*{
     margin: 0;
-    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
 }
-
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--corprincipal);
+}
+h1{
+    margin: 0;
+    font-family: var(--fontetitulos);
+}
+h2{
+    margin: 0;
+    font-family: var(--fontetitulos);
+}
+p{
+    margin: 0;
+    font-family: var(--fonteprincipal);
+}
+/* Começo das configurações de nav */
+#navegação{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    background-color: var(--cordestaques);
+    box-shadow: 0px 0px 7px #000000;
+}
+#logo{
+    width: fit-content;
+    height: 50px;
+    margin: auto;
+    margin-left: 15px;
+}
+nav{
+    width: fit-content;
+    margin: auto;
+    margin-right: 5px;
+    text-align: right;
+}
+nav a{
+    font-family: var(--fontetitulos);
+    font-size: 20px;
+    padding: 0 10px 0 0;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+nav a:hover{
+    padding: 5px;
+    background-color: var(--corprincipal);
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 25px;
+}
+nav a:active{
+    color: #CBEEF3;
+}
+/* Fim das configurações de nav */
+/* Começo das configurações de index */
 #perguntas{
-    background-color: #AC0908;
-    max-width: 100%;
-    height: 100%;
     position: sticky;
     display: flex;
     flex-wrap: wrap;
-    margin: 3% 10% 3%;
+    width: 80%;
+    margin: 3.5% 10%;
+    background-color: var(--cordestaques);
     align-content: center;
     justify-content: center;
     text-align: center;
+    opacity: 0.9;
+    color: #CBEEF3;
 }
-
 #perguntas h2{
-    margin: 0;
-    padding: 20px 0px 0px;
+    margin: 1.5% 0 0;
     font-size: 20px;
-    font-family: var(--fontetitulos);
+    letter-spacing: 3px;
 }
-
 #perguntas p{
     width: 100%;
     margin: 30px 0px 5px;
     font-size: 25px;
-    font-family: var(--fontetitulos);
 }
-
 #perguntas label{
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonteprincipal);
 }
 #perguntas button{
     margin: 30px 0px 30px ;
-    font-size: 30px;
-    font-family: 'kinkee', 'Times New Roman', Times, serif;
     letter-spacing: 2px;
+    font-family: var(--fontegay);
+    font-size: 30px;
     opacity: 0.8;
 }
 #perguntas button:hover{
@@ -64,3 +130,123 @@ body{
     color: #FFFFFF;
     opacity: 1;
 }
+/* Fim das configurações de index */
+/* Começo das configurações de presente */
+.p1h1{
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-family: var(--fontegay);
+    font-size: 40px;
+}
+.p1h2{
+    margin: 5px 0 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+#presente{
+    height: 100vh;
+    margin: 330px 0 0 0;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+}
+#presente .envelope{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+#presente .envelope .envelopeinterno{
+    position: relative;
+    width: 600px;
+    height: 460px;
+}
+#presente .envelope .envelopeinterno::before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    border-top: 260px solid #544D70;
+    border-right: 300px solid transparent;
+    border-left: 300px solid transparent;
+    top: 0;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+}
+#presente .envelope .envelopeinterno::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 0px;
+    border-top: 260px solid transparent;
+    border-right: 300px solid #544D70;
+    border-left: 300px solid #544D70;
+    border-bottom: 200px solid #544D70;
+}
+.texto{
+    position: absolute;
+    right: 22%;
+    bottom: 0;
+    width: 54%;
+    height: 85%;
+    background: #A2E8DD;
+    transition: all 1s ease-in-out;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.texto .frase  h3{
+    font-family: var(--fonteprincipal);
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+}
+.texto .frase p{
+    font-family: var(--fontecursiva);
+    font-size: 12px;
+}
+.heart{
+    position: absolute;
+    top: 119%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #941C2F;
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.heart::before, .heart::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #941C2F;
+    border-radius: 50%;
+}
+.heart::before{
+    top: -7.5px;
+}
+.heart::after{
+    right: 7.5px;
+}
+.aba .envelopeinterno::before{
+    transform: rotateX(180deg);
+    z-index: 0;
+    transition: 0.01ms;
+}
+.aba .envelopeinterno .texto{
+    height: 100%;
+    bottom: 250px;
+    transform: scale(1.5);
+    transition-delay: 0.1ms;
+    z-index: 2;
+}
+.aba .heart{
+    transform: rotate(90deg);
+    transition-delay: 0.1s;
+}
+/* Fim das configurações de presente */
+/* Começo das configurações de teamo */
+
+/* Fim das configurações de teamo */

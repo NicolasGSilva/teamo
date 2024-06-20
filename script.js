@@ -13,3 +13,8 @@ function verificarrespostas() {
         window.location.href = "https://www.youtube.com/watch?v=2GXlAJPa-KM";
     }
 }
+
+const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
