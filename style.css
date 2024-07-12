@@ -1,28 +1,28 @@
 @charset "UTF=8";
 @font-face{
    font-family: playstory;
-   src: url(_fonts/playstory.otf);
+   src: url(fonts/playstory.otf);
    font-weight: normal;
 }
 @font-face{
     font-family: neue;
-    src: url(_fonts/neuemail.ttf);
+    src: url(fonts/neuemail.ttf);
     font-weight: normal;
 } 
 @font-face{
     font-family: kinkee;
-    src: url(_fonts/kinkee.TTF);
+    src: url(fonts/kinkee.TTF);
     font-weight: normal;
 }
 @font-face {
-    font-family: cursiva;
-    src: url(_fonts/cursive.ttf);
+    font-family: chasing;
+    src: url(fonts/chasing.otf);
     font-weight: normal;
 }
 :root{
     --fontetitulos: 'playstory', sans-serif;
     --fonteprincipal: 'neue', sans-serif;
-    --fontecursiva: 'cursiva', serif;
+    --fontecarta: 'chasing', sans-serif;
     --fontegay: 'kinkee', sans-serif;
     --corprincipal: #F7B0C2;
     --cordestaques: #6B4E71;
@@ -39,12 +39,16 @@ body{
     background-color: var(--corprincipal);
 }
 h1{
-    margin: 0;
+    margin: 20px 0 0 0;
     font-family: var(--fontetitulos);
+    text-align: center;
+    font-size: 40px;
 }
 h2{
     margin: 0;
     font-family: var(--fontetitulos);
+    text-align: center;
+    font-size: 20px;
 }
 p{
     margin: 0;
@@ -133,26 +137,21 @@ nav a:active{
 /* Fim das configurações de index */
 /* Começo das configurações de presente */
 .p1h1{
-    margin: 20px 0 0 0;
-    text-align: center;
     font-family: var(--fontegay);
-    font-size: 40px;
 }
 .p1h2{
     margin: 5px 0 0;
     text-align: center;
-    font-size: 20px;
 }
-
 #presente{
     height: 100vh;
-    margin: 330px 0 0 0;
+    margin: 240px 0 0 0;
     display: grid;
     place-items: center;
     box-sizing: border-box;
 }
 #presente .envelope{
-    background-color: #FFFFFF;
+    background-color: #A39BA8;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 #presente .envelope .envelopeinterno{
@@ -195,17 +194,18 @@ nav a:active{
 }
 .texto .frase  h3{
     font-family: var(--fonteprincipal);
-    font-size: 20px;
+    font-size: 15px;
     color: #000000;
     text-align: center;
 }
 .texto .frase p{
-    font-family: var(--fontecursiva);
-    font-size: 12px;
+    text-align: justify;
+    font-family: var(--fontecarta);
+    font-size: 14px;
 }
 .heart{
     position: absolute;
-    top: 119%;
+    top: 120%;
     left: 50%;
     width: 15px;
     height: 15px;
@@ -238,6 +238,7 @@ nav a:active{
 .aba .envelopeinterno .texto{
     height: 100%;
     bottom: 250px;
+    color: #000000;
     transform: scale(1.5);
     transition-delay: 0.1ms;
     z-index: 2;
@@ -245,8 +246,174 @@ nav a:active{
 .aba .heart{
     transform: rotate(90deg);
     transition-delay: 0.1s;
+    transition: 1s;
+    opacity: 0;
 }
 /* Fim das configurações de presente */
-/* Começo das configurações de teamo */
-
-/* Fim das configurações de teamo */
+/* Começo das configurações de momento */
+.mmntesq{
+    max-width: 70%;
+    height: auto;
+    margin: 30px 15% 60px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--cordestaques);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.mmntesq p{
+    flex: 1 1 65%;
+    padding: 15px 10px 0 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    font-family: var(--fonteprincipal);
+    color: #000000;
+    font-size: 25px;
+    text-align: justify;
+}
+.mmntesq img{
+    flex: 0 0 200px;
+    margin: auto 15px;
+    padding: 15px 0 15px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.mmntesq img:hover{
+    transform: scale(1.5);
+    padding: 0;
+    margin: 60px 60px 60px;
+    transition: 1.5s;
+    border: 3px solid #FFFFFF;
+    border-radius: 5px;
+}
+.mmntdir{
+    max-width: 70%;
+    height: auto;
+    margin: 30px 15% 60px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--cordestaques);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.mmntdir img{
+    flex: 0 0 200px;
+    margin: auto 15px;
+    padding: 15px 0 15px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.mmntdir img:hover{
+    transform: scale(1.5);
+    padding: 0;
+    margin: 60px 0 60px 60px;
+    transition: 1.5s;
+    border: 3px solid #FFFFFF;
+    border-radius: 5px;
+}
+.mmntdir p{
+    flex: 1 1 65%;
+    padding: 15px 10px 0 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    font-family: var(--fonteprincipal);
+    color: #000000;
+    font-size: 25px;
+    text-align: justify;
+}
+.mmntesqdir{
+    max-width: 70%;
+    height: auto;
+    margin: 30px 15% 60px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--cordestaques);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.mmntesqdir img{
+    flex: 0 0 200px;
+    margin: auto 15px;
+    padding: 15px 0 15px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.mmntesqdir p{
+    flex: 1 1 65%;
+    padding: 15px 10px 0 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    font-family: var(--fonteprincipal);
+    color: #000000;
+    font-size: 25px;
+    text-align: justify;
+}
+/* Fim das configurações de momento */
+/* Começo das configurações de galeria */
+.g1h1{
+    margin: 30px 10% 20px;
+    max-width: 80%;
+    font-size: 20px;
+}
+.areadeimagem{
+    max-width: 80%;
+    margin: 0 10%;
+    background-color: var(--cordestaques);
+}
+.link{
+    display: inline-block;
+    max-width: 240px;
+    max-height: 240px;
+    margin: 0 13px;
+}
+.link img{
+    width: 240px;
+    height: 240px;
+    margin: 10px 0 40px 0;
+    object-fit: cover;
+}
+.link img:hover{
+    transition: 0.5s;
+    border: 10px solid #FFFFFF;
+    border-bottom: 50px solid #FFFFFF;
+}
+.link a{
+    display: none;
+    margin: 0 45%;
+}
+.link a img{
+    width: 25px;
+    height: auto;
+}
+.link img:hover~a{
+    margin-top: -85px;
+    display: none;
+}
+.areadevideo{
+    max-width: 80%;
+    margin: 0 10%;
+    background-color: var(--cordestaques);
+}
+video{
+    padding: 15px 0 10px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+/* Fim das configurações de galeria */
+/* Começo das configurações de fim */
+.fim{
+    display: flex;
+    margin-top: 50px;
+    background-color: var(--cordestaques);
+    font-size: 20px;
+    justify-content: center;
+    font-family: var(--fonteprincipal);
+}
+/* Fim das configurações de fim */
